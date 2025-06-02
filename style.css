@@ -1,0 +1,488 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container { /* Utility class for centering content */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: #d9534f; /* Primary theme color */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Cart Summary Navigation Bar (for index.html) */
+#cart-summary-nav {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#cart-summary-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-summary-nav span {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#cart-count {
+    background-color: #f0ad4e; /* Accent color */
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+#proceed-to-bill {
+    background-color: #5cb85c; /* Green for proceed/checkout */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#proceed-to-bill:hover {
+    background-color: #4cae4c;
+}
+
+/* Main Content Area */
+main {
+    padding-top: 20px;
+}
+
+/* Section Styles (Menu and Billing) */
+section {
+    background-color: #fff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Menu Section Specifics (index.html) */
+.category-section {
+    margin-bottom: 30px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 3px solid #f0ad4e;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.menu-item-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.menu-item-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-item-details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #d9534f;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.menu-item-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.menu-item-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ec971f;
+}
+
+/* Billing Page Specific Styles (billing.html) */
+.billing-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px; /* Added padding for smaller screens if container hits edges */
+}
+
+#order-details-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.billing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.billing-table th, .billing-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.billing-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.billing-table td .item-quantity {
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.quantity-btn, .remove-item-btn {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-btn:hover, .remove-item-btn:hover {
+    background-color: #ddd;
+}
+
+.remove-item-btn {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.remove-item-btn:hover {
+    background-color: #e4b9b9;
+}
+
+/* Discount Section Styles (billing.html) */
+#discount-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#discount-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.discount-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#discount-percentage {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+    font-size: 0.9em;
+    flex-grow: 1; /* Allow input to grow */
+}
+
+#apply-discount-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking too much */
+}
+
+#apply-discount-btn:hover {
+    background-color: #0056b3;
+}
+
+#apply-discount-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#discount-applied-info {
+    font-style: italic;
+    color: #28a745;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Grand Total Section Refinements */
+#grand-total-section {
+    text-align: right;
+    margin-bottom: 25px;
+}
+#grand-total-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+#grand-total-section p span {
+    font-weight: 500;
+}
+
+#discount-amount-display {
+    color: #dc3545;
+}
+#discount-amount-display span {
+    color: #dc3545;
+}
+
+#grand-total-section h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.billing-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 10px; /* Add gap for wrapped buttons */
+}
+
+.billing-actions button {
+    padding: 12px 20px; /* Adjusted padding slightly */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Allow buttons to grow and fill space if needed */
+    min-width: 150px; /* Minimum width for buttons */
+}
+
+#back-to-menu {
+    background-color: #777;
+    color: white;
+}
+#back-to-menu:hover {
+    background-color: #666;
+}
+
+.confirm-button {
+    background-color: #5cb85c;
+    color: white;
+}
+.confirm-button:hover {
+    background-color: #4cae4c;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #777;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    #cart-summary-nav .container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch; /* Make items in nav take full width */
+    }
+    #cart-summary-nav #proceed-to-bill {
+        width: 100%;
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .billing-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .billing-actions button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .discount-controls {
+        flex-direction: column; /* Stack discount input and button */
+        align-items: stretch;
+    }
+    #discount-percentage {
+        width: auto; /* Allow it to take full width in column */
+    }
+}
+
+@media (max-width: 480px) {
+    .items-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    .menu-item-image {
+        height: 160px;
+    }
+
+    /* Responsive Table for Billing Page */
+    .billing-table thead {
+        display: none; /* Hide table headers */
+    }
+    .billing-table, .billing-table tbody, .billing-table tr, .billing-table td {
+        display: block;
+        width: 100% !important; /* Ensure full width */
+        box-sizing: border-box;
+    }
+    .billing-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        background-color: #fff; /* Give each row a card-like bg */
+    }
+    .billing-table td {
+        border: none;
+        padding: 8px 0;
+        position: relative;
+        padding-left: 45%; /* Space for the label */
+        text-align: right; /* Align content to the right */
+        min-height: 22px; /* Ensure space even if content is short */
+    }
+    .billing-table td::before {
+        content: attr(data-label); /* Use data-label from JS */
+        position: absolute;
+        left: 10px; /* Adjust spacing */
+        width: 40%; /* Adjust width of label */
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left; /* Align label text to left */
+    }
+    .billing-table td:last-child { /* Adjust action button alignment */
+        padding-left: 0; /* Reset padding for button cell */
+        text-align: center; /* Center action button */
+    }
+    .billing-table td[data-label="Action"] button {
+        width: 100%; /* Make remove button full width */
+    }
+     /* Adjust quantity controls for mobile table */
+    .billing-table td[data-label="Qty"] {
+        display: flex;
+        justify-content: flex-end; /* Align quantity controls to the right */
+        align-items: center;
+    }
+    .billing-table td[data-label="Qty"]::before {
+        width: auto; /* Allow label to size naturally */
+        position: static; /* Normal flow for label */
+        padding-right: 10px;
+    }
+     .billing-table td[data-label="Qty"] .quantity-btn,
+     .billing-table td[data-label="Qty"] .item-quantity {
+        margin-left: 5px;
+    }
+
+    .container { /* Reduce side padding on very small screens */
+        padding: 0 10px;
+    }
+}

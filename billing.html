@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order - Billing Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Order Summary</h1>
+    </header>
+
+    <main class="billing-container">
+        <section id="order-details-section">
+            <h2>Confirm Your Order</h2>
+            <div id="full-cart-items-container">
+                <p class="empty-cart-message">Loading your order details...</p>
+            </div>
+
+            <div id="discount-section">
+                <h3>Apply Discount</h3>
+                <div class="discount-controls">
+                    <input type="number" id="discount-percentage" placeholder="Enter % (e.g., 10)" min="0" max="100">
+                    <button id="apply-discount-btn">Apply Discount</button>
+                </div>
+                <p id="discount-applied-info" style="display: none;"></p>
+            </div>
+            <div id="grand-total-section">
+                <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                <p id="discount-amount-display" style="display: none;">Discount: -$<span id="discount-value">0.00</span></p>
+                <h3>Grand Total: $<span id="grand-total">0.00</span></h3>
+            </div>
+
+            <div class="billing-actions">
+                <button id="back-to-menu">Back to Menu</button>
+                <button id="confirm-order" class="confirm-button">Confirm Order</button> </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Restaurant Name]</p>
+    </footer>
+
+    <script src="billing_app.js"></script>
+</body>
+</html>
